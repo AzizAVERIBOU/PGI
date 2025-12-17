@@ -1,0 +1,56 @@
+.navbar {
+  background: #2c3e50;
+  color: white;
+  border-bottom: 3px solid #34495e;
+}
+
+.navbar-header {
+  background: #34495e;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #7f8c8d;
+  text-align: center;
+}
+
+.navbar-logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  background: #2c3e50;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-right: 1px solid #34495e;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: #34495e;
+}
+
+.nav-link.active {
+  background: #3498db;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border-left: 1px solid #c0392b;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}

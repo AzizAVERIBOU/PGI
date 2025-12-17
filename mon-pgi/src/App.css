@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f5f1e8 0%, #e8dcc8 100%);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f5f1e8 0%, #e8dcc8 100%);
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}

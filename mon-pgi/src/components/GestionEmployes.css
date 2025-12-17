@@ -1,0 +1,377 @@
+.gestion-employes {
+  margin-top: 2rem;
+}
+
+.debug-info {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: #856404;
+}
+
+.gestion-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gestion-header-left h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.btn-ajouter-employe {
+  padding: 1rem 2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+}
+
+.btn-ajouter-employe:hover {
+  background: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+}
+
+/* Liste des employés */
+.loading-employes {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.no-employes {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.no-employes p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.employes-list {
+  margin-bottom: 2rem;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employes-table thead {
+  background: #9b59b6;
+  color: white;
+}
+
+.employes-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #8e44ad;
+}
+
+.employes-table tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: all 0.3s ease;
+}
+
+.employes-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.employes-table tbody tr.employe-inactif {
+  background: #fff5f5;
+  opacity: 0.7;
+}
+
+.employes-table td {
+  padding: 1rem;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.numero-cell {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  color: #9b59b6;
+}
+
+.nom-cell strong {
+  color: #2c3e50;
+}
+
+.email-cell,
+.phone-cell,
+.date-cell {
+  color: #6c757d;
+}
+
+.role-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.role-badge.admin {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.role-badge.employe {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.statut-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.statut-badge.actif {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statut-badge.inactif {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-toggle-statut {
+  padding: 0.5rem;
+  background: transparent;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-toggle-statut.desactiver:hover {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.btn-toggle-statut.activer:hover {
+  background: #d4edda;
+  border-color: #28a745;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.modal-subtitle {
+  margin: 0 0 0.5rem 0;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.modal-info {
+  margin: 0 0 1.5rem 0;
+  padding: 1rem;
+  background: #e7f3ff;
+  border-left: 4px solid #3498db;
+  border-radius: 4px;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Formulaire */
+.employe-form {
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #9b59b6;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 0.25rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #ecf0f1;
+}
+
+.btn-save {
+  flex: 1;
+  padding: 0.9rem 2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-save:hover:not(:disabled) {
+  background: #218838;
+}
+
+.btn-save:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 0.9rem 2rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Informations */
+.employes-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff3e0;
+  border: 2px solid #f39c12;
+  border-radius: 8px;
+}
+
+.employes-info h4 {
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.employes-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.employes-info li {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+
