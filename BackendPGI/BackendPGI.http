@@ -1,0 +1,6 @@
+@BackendPGI_HostAddress = http://localhost:5279
+
+GET {{BackendPGI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
